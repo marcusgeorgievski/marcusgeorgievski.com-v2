@@ -1,6 +1,9 @@
 import Project from "@/components/project/project-card"
 import Section from "@/components/sections/section"
 import { Project as P } from "@/lib/types"
+import { Button } from "../ui/button"
+import Link from "next/link"
+import { FaGithub } from "react-icons/fa6"
 
 interface ProjectsProps {
     //children: React.ReactNode;
@@ -11,7 +14,7 @@ export default function Projects() {
         <div className="">
             <Section subtitle="Click an image to view a demo">Projects</Section>
 
-            <div className="space-y-6 xl:space-y-6 lg:space-y-0 lg:grid grid-cols-2 lg:grid-cols-1 group/list">
+            <div className="space-y-6 xl:space-y-6 lg:space-y-0 lg:grid grid-cols-2 lg:grid-cols-1 group/list mb-6">
                 {projects.map((project, i) => (
                     <div
                         key={i}
@@ -27,6 +30,16 @@ export default function Projects() {
                     </div>
                 ))}
             </div>
+            <Link
+                href={"https://github.com/marcusgeorgievski"}
+                className="w-full"
+                target="_blank"
+            >
+                <Button className="w-full" variant="secondary">
+                    More on
+                    <FaGithub className="mx-1 ml-2" /> GitHub
+                </Button>
+            </Link>
         </div>
     )
 }
@@ -59,11 +72,5 @@ const projects: P[] = [
         image: "indeed.png",
         tags: ["Python", "Selenium", "Pandas", "bs4", "Matplotlib"],
         github: "https://github.com/marcusgeorgievski/indeed-skill-scrape",
-    },
-    {
-        title: "GitHub",
-        description: "More here!",
-        image: "github.png",
-        github: "https://github.com/marcusgeorgievski",
     },
 ]
