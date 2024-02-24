@@ -18,7 +18,8 @@ export default function Projects() {
                 {projects.map((project, i) => (
                     <div
                         key={i}
-                        className="group xl:group-hover/list:opacity-50 xl:group-hover/list:blur-[1px] hover:!blur-none hover:!opacity-100 transition-all duration-200 animate-fade-in-up"
+                        // xl:group-hover/list:blur-[1px] hover:!blur-none
+                        className="group xl:group-hover/list:opacity-50  hover:!opacity-100 transition-all duration-200 animate-fade-in-up"
                         // style={{
                         //     animation: `fade-in-up 0.6s ease-out ${
                         //         i * 300
