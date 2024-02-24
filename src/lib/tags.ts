@@ -21,17 +21,17 @@ import { FaGolang } from "react-icons/fa6"
 import { Tag } from "@/lib/types"
 import { SiCplusplus, SiExpress, SiOpencv } from "react-icons/si"
 
-export const languages = ["Python", "TypeScript", "SQL", "Java", "C++", "Go"]
+export const languages = ["Python", "TypeScript", "SQL", "Java", "Go", "C++"]
 
 export const webTechnologies = [
     "Next.js",
     "React",
-    "Tailwind",
-    "Prisma",
     "Express",
     "Auth",
+    "Prisma",
     "React Query",
     "Redis",
+    "Tailwind",
 ]
 
 export const dataScience = [

@@ -24,7 +24,7 @@ export default function Skills() {
                 </div>
                 <div>
                     <h3 className=" mb-2 text-foreground/70">
-                        Web Technologies
+                        Web Development
                     </h3>
                     <div className="flex gap-3 flex-wrap">
                         {webTechnologies.map((technology) => (
@@ -33,7 +33,7 @@ export default function Skills() {
                     </div>
                 </div>
                 <div>
-                    <h3 className=" mb-2 text-foreground/70">Data Science</h3>
+                    <h3 className=" mb-2 text-foreground/70">Data Toolkit</h3>
                     <div className="flex gap-3 flex-wrap">
                         {dataScience.map((technology) => (
                             <Tag key={technology} name={technology} />

@@ -1,5 +1,6 @@
 import NoteCard from "@/components/notes/note-card"
 import ProfileCard from "@/components/notes/profile-card"
+import { PiWarning } from "react-icons/pi"
 
 export default async function NotesPage() {
     const res = await fetch(
@@ -9,16 +10,21 @@ export default async function NotesPage() {
 
     return (
         <>
-            <div className="py-8">
+            <div className="py-8 flex flex-col gap-4">
                 {/* HEADER */}
                 <div>
                     <ProfileCard />
                 </div>
 
-                {/* FILTERS */}
-                <div></div>
+                <div className="text-xl text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                        <PiWarning />
+                        <p>Example</p>
+                    </div>
+                    <p className="text-muted-foreground text-xs">coming soon</p>
+                </div>
 
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-2">
+                <div className="mt-4 grid grid-cols-1 md:grid-cols-2">
                     <NoteCard note={notes[0]} />
                 </div>
             </div>
