@@ -22,6 +22,7 @@ export default function NoteCard({ note }: { note: NotePost }) {
             className="border w-full rounded p-3 gap-2 flex flex-col sm:flex-row transition-all hover:bg-accent/30"
         >
             <div className="w-full border rounded-sm aspect-video sm:h-[100px] sm:w-fit">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src="https://miro.medium.com/v2/resize:fit:1200/0*zKkSjGmRg-_1FQgX.jpg"
                     alt=""
