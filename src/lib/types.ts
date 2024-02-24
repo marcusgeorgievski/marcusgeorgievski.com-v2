@@ -5,7 +5,7 @@ export interface Page {
 
 export interface Tag {
     image?: string
-    className?: string
+    styles?: string
 
     icon?: any
     iconStyle?: string

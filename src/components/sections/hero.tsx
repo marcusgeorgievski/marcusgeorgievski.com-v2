@@ -18,10 +18,19 @@ export default function Hero() {
             </p>
 
             <p className="max-w-[400px] text-muted-foreground text-xs mb-10">
-                Currently working with <span className="font-mono">Go</span> for
-                backend microservices, computer vision with{" "}
-                <span className="font-mono">OpenCV</span>, and{" "}
-                <span className="font-mono">AWS</span> Cloud Services.
+                Currently working with{" "}
+                <span className="font-mono underline underline-offset-2 hover:text-blue-600">
+                    Go
+                </span>{" "}
+                for backend microservices, computer vision with{" "}
+                <span className="font-mono underline underline-offset-2 hover:text-blue-600">
+                    OpenCV
+                </span>
+                , and{" "}
+                <span className="font-mono underline underline-offset-2 hover:text-blue-600">
+                    AWS
+                </span>{" "}
+                Cloud Services.
             </p>
 
             <div className="mb-10">
