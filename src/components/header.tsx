@@ -11,7 +11,7 @@ import { PiArrowSquareOutLight } from "react-icons/pi"
 const pages: Page[] = [
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
-    { name: "Blog", href: "/blog" },
+    { name: "Notes", href: "/notes" },
     { name: "Contact", href: "#contact" },
 ]
 
@@ -20,7 +20,7 @@ export default function Header() {
     const router = useRouter()
 
     const handleClick = (here: string) => {
-        if (pathname.includes("blog") || pathname.includes("studio")) {
+        if (pathname.includes("notes") || pathname.includes("studio")) {
             router.push("/")
             setTimeout(() => {
                 scrollTo(here)
@@ -68,14 +68,14 @@ export default function Header() {
                         Contact
                     </Button>
                     <Link
-                        href="/blog"
+                        href="/notes"
                         className=" hover:text-foreground  px-0 text-sm"
                     >
                         <Button
                             variant="link"
                             className="text-muted-foreground hover:text-foreground  px-0 flex items-center gap-1"
                         >
-                            Blog
+                            Notes
                         </Button>
                     </Link>
                 </nav>

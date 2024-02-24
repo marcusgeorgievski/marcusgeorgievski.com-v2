@@ -1,5 +1,5 @@
 "use client"
-import Section from "@/components/section"
+import Section from "@/components/sections/section"
 import Tag from "@/components/tag"
 import { webTechnologies, dataScience, languages } from "@/lib/tags"
 

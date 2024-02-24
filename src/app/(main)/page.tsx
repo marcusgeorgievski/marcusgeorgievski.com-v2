@@ -1,9 +1,9 @@
-import Hero from "./_sections/hero"
-import Projects from "./_sections/projects"
-import MessageForm from "./_sections/message-form"
-import Messages from "../../components/messages/messages"
+import Hero from "@/components/sections/hero"
+import Projects from "@/components/project/projects"
+import MessageForm from "@/components/messages/message-form"
+import Messages from "@/components/messages/messages"
 import { Suspense } from "react"
-import Skills from "./_sections/skills"
+import Skills from "@/components/sections/skills"
 
 export default function Home({ searchParams: { msg } }: any) {
     return (

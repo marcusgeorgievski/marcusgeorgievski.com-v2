@@ -1,11 +1,7 @@
-import BlogCard from "@/components/blog/blog-card"
-import ProfileCard from "@/components/blog/profile-card"
+import NoteCard from "@/components/notes/note-card"
+import ProfileCard from "@/components/notes/profile-card"
 
-interface BlogPageProps {
-    //children: React.ReactNode;
-}
-
-export default async function BlogPage() {
+export default async function NotesPage() {
     const res = await fetch(
         "https://nw71i56n.api.sanity.io/v2024-02-23/data/query/production?query=*%5B_type+%3D%3D+%27post%27%5D+%0A%0A"
     )
@@ -22,15 +18,15 @@ export default async function BlogPage() {
                 {/* FILTERS */}
                 <div></div>
 
-                <div className="mt-8 grid grid-cols-1 lg:grid-cols-2">
-                    <BlogCard blog={blogs[0]} />
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2">
+                    <NoteCard note={notes[0]} />
                 </div>
             </div>
         </>
     )
 }
 
-const blogs = [
+const notes = [
     {
         title: "Title of Article",
         date: "Feb 26, 2024",

@@ -1,5 +1,5 @@
 import Project from "@/components/project/project-card"
-import Section from "@/components/section"
+import Section from "@/components/sections/section"
 import { Project as P } from "@/lib/types"
 
 interface ProjectsProps {

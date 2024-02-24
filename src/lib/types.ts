@@ -31,7 +31,7 @@ export interface Project {
     video?: string | null
 }
 
-export interface BlogPost {
+export interface NotePost {
     title: string
     description: string
     date: string

@@ -15,7 +15,7 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import Section from "@/components/section"
+import Section from "@/components/sections/section"
 import { Textarea } from "@/components/ui/textarea"
 import { createMessage } from "@/actions/message"
 import { useTransition } from "react"

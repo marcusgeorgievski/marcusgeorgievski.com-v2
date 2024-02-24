@@ -1,4 +1,4 @@
-import Section from "@/components/section"
+import Section from "@/components/sections/section"
 
 interface PostsProps {
     //children: React.ReactNode;
