@@ -1,7 +1,7 @@
 import Hero from "./_sections/hero"
 import Projects from "./_sections/projects"
 import MessageForm from "./_sections/message-form"
-import Messages from "../components/messages/messages"
+import Messages from "../../components/messages/messages"
 import { Suspense } from "react"
 import Skills from "./_sections/skills"
 

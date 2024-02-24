@@ -41,6 +41,4 @@ export async function createMessage(values: z.infer<typeof messageSchema>) {
             error: "Something went wrong!" + error.message,
         }
     }
-
-    console.log("server:", name, message)
 }

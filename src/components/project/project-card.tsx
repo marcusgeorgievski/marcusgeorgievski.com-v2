@@ -6,6 +6,7 @@ import { Button } from "../ui/button"
 import Link from "next/link"
 import { FaGithub } from "react-icons/fa"
 import { IoIosLaptop } from "react-icons/io"
+import Tag from "@/components/tag"
 
 export default function Project({ project }: { project: P }) {
     const { title, description, image, tags, github, live, video } = project
@@ -35,6 +36,7 @@ export default function Project({ project }: { project: P }) {
                                 autoPlay
                                 width="1000"
                                 src={`/${video}`}
+                                controls
                             ></video>
                         </div>
                     </DialogContent>
@@ -57,12 +59,15 @@ export default function Project({ project }: { project: P }) {
                 {tags && (
                     <div className="flex gap-2 mt-4 flex-wrap">
                         {tags.map((tag, i) => (
-                            <span
+                            <Tag
                                 key={i}
-                                className="text-xs bg-accent/80 text-accent-foreground/90 px-2 py-1 rounded"
-                            >
-                                {tag}
-                            </span>
+                                name={tag}
+                                custom={{
+                                    variant: "minimal",
+                                    border: false,
+                                    icon: true,
+                                }}
+                            />
                         ))}
                     </div>
                 )}

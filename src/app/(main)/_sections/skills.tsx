@@ -1,3 +1,4 @@
+"use client"
 import Section from "@/components/section"
 import Tag from "@/components/tag"
 import { webTechnologies, dataScience, languages } from "@/lib/tags"

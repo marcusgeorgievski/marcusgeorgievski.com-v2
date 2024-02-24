@@ -20,7 +20,7 @@ export default function Header() {
     const router = useRouter()
 
     const handleClick = (here: string) => {
-        if (pathname.includes("blog")) {
+        if (pathname.includes("blog") || pathname.includes("studio")) {
             router.push("/")
             setTimeout(() => {
                 scrollTo(here)
@@ -35,11 +35,11 @@ export default function Header() {
                 <nav className="flex items-center space-x-5 [&>*]:font-normal [&>*]:text-muted-foreground">
                     <Button
                         variant="link"
-                        className="!text-indigo-600  px-0 text-2xl"
+                        className="!text-indigo-600  px-0 text-2xl group"
                         onClick={() => handleClick("home")}
                         aria-label="Home"
                     >
-                        <GiCapybara />
+                        <GiCapybara className="group-hover:animate-bounce " />
                     </Button>
 
                     {/* LINKS */}

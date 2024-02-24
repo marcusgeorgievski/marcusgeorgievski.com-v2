@@ -5,7 +5,12 @@ interface BlogPageProps {
     //children: React.ReactNode;
 }
 
-export default function BlogPage() {
+export default async function BlogPage() {
+    const res = await fetch(
+        "https://nw71i56n.api.sanity.io/v2024-02-23/data/query/production?query=*%5B_type+%3D%3D+%27post%27%5D+%0A%0A"
+    )
+    const bs = await res.json()
+
     return (
         <>
             <div className="py-8">

@@ -43,6 +43,16 @@ const projects: P[] = [
         video: "openai.mov",
     },
     {
+        title: "CodeHome",
+        description:
+            "Full stack platform for users to create, explore, and showcase any coding relating projects.",
+        image: "codehomeImage.png",
+        tags: ["Next.js", "React", "SQL", "Prisma", "Auth", "TypeScript"],
+        github: "https://github.com/marcusgeorgievski/codeHome",
+        live: "https://codehome.app/",
+        video: "codehomeVideo.mov",
+    },
+    {
         title: "Indeed Skill Scrape",
         description:
             "Parse job posting data based on provided job title and interested technical skills.",
@@ -51,20 +61,9 @@ const projects: P[] = [
         github: "https://github.com/marcusgeorgievski/indeed-skill-scrape",
     },
     {
-        title: "OpenAI GPT Playground",
-        description:
-            "AI chatbot developed using OpenAI's GPT API to create an advanced assistant. Its role and parameters can both be customized to tailor your experience.",
-        image: "openai.png",
-        tags: ["OpenAI", "React", "React Query", "Next.js", "TypeScript"],
-        github: "https://github.com/marcusgeorgievski/openai-api",
-        live: "https://openai-api-blush.vercel.app/",
-        video: "openai.mov",
-    },
-    {
         title: "GitHub",
-        description: "More code here!",
+        description: "More here!",
         image: "github.png",
         github: "https://github.com/marcusgeorgievski",
-        video: null,
     },
 ]

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+import "./(main)/globals.css"
 import Header from "@/components/header"
 import { ThemeProvider } from "@/components/theme/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={""}>
+            <body className={inter.className}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
@@ -40,9 +40,9 @@ export default function RootLayout({
                 >
                     <div className="relative min-h-screen bg-background">
                         <Header />
-                        <main className="max-w-[1200px] mx-auto px-6 z-10 pb-16">
-                            {children}
-                        </main>
+
+                        {children}
+
                         <Toaster />
                     </div>
                 </ThemeProvider>

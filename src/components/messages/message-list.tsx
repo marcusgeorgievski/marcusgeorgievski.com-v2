@@ -20,7 +20,6 @@ export default function MessageList({ messages }: any) {
     router
 
     function delMessage(id: number) {
-        console.log("delete", id)
         startTransition(async () => {
             await deleteMessage(id)
             router.refresh()
