@@ -54,6 +54,7 @@ export default function MessageForm() {
                     description:
                         res?.description || "Thanks " + values.name + "!",
                 })
+                form.resetField("message")
             })
             router.refresh()
         })
