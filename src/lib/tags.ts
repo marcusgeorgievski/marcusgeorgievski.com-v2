@@ -10,7 +10,7 @@ import {
     SiTailwindcss,
     SiRedis,
     SiReactquery,
-    SiC,
+    SiDocker,
 } from "react-icons/si"
 import { BiLogoPostgresql, BiLogoJava } from "react-icons/bi"
 import { RiOpenaiFill } from "react-icons/ri"
@@ -20,6 +20,7 @@ import { MdFingerprint } from "react-icons/md"
 import { FaGolang } from "react-icons/fa6"
 import { Tag } from "@/lib/types"
 import { SiCplusplus, SiExpress, SiOpencv } from "react-icons/si"
+import { FaAws } from "react-icons/fa"
 
 export const languages = ["Python", "TypeScript", "SQL", "Java", "Go", "C++"]
 
@@ -27,6 +28,8 @@ export const webTechnologies = [
     "Next.js",
     "React",
     "Express",
+    "AWS",
+    "Docker",
     "Auth",
     "Prisma",
     "React Query",
@@ -197,5 +200,21 @@ export const tags: Tag[] = [
         textStyle: "text-white",
         iconStyle: "text-red-500",
         icon: SiOpencv,
+    },
+    {
+        name: "AWS",
+        text: "AWS",
+        className: "bg-slate-800",
+        textStyle: "text-yellow-500",
+        iconStyle: "text-yellow-500 text-base",
+        icon: FaAws,
+    },
+    {
+        name: "Docker",
+        text: "Docker",
+        className: "bg-white",
+        textStyle: "text-blue-600",
+        iconStyle: "text-blue-600",
+        icon: SiDocker,
     },
 ]

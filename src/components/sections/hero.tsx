@@ -3,6 +3,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { BiMessage } from "react-icons/bi"
 import Link from "next/link"
 import { scrollTo } from "@/lib/utils"
+import Tag from "@/components/tag"
+import { FaGolang } from "react-icons/fa6"
 
 export default function Hero() {
     return (
@@ -10,16 +12,21 @@ export default function Hero() {
             <h1 className="text-4xl font-extrabold mb-3">Marcus Georgievski</h1>
             <p className="text-xl text-foreground mb-6">Full Stack Developer</p>
 
-            <p className="max-w-[400px] mb-10">
+            <p className="max-w-[400px] mb-4">
                 Building full stack applications with a focus on performance and
                 user experience.
+            </p>
+
+            <p className="max-w-[400px] text-muted-foreground text-xs mb-10">
+                Currently working with <span className="font-mono">Go</span> for
+                backend microservices, computer vision with{" "}
+                <span className="font-mono">OpenCV</span>, and{" "}
+                <span className="font-mono">AWS</span> Cloud Services.
             </p>
 
             <div className="mb-10">
                 <Socials />
             </div>
-
-            <div></div>
         </div>
     )
 }
