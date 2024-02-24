@@ -47,9 +47,9 @@ export default function Project({ project }: { project: P }) {
                     width={1200}
                     height={100}
                     alt={title}
-                    className="rounded border xl:w-[280px]"
+                    className="rounded border xl:w-[280px] mb-4"
                     priority
-                    sizes="40vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             )}
 
