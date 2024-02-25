@@ -49,7 +49,6 @@ export default function Tag({
                 className={cn(
                     className ||
                         "text-accent-foreground/90 border bg-accent rounded text-xs px-2 py-0.5 inline-flex items-center justify-center gap-1.5",
-                    className || styles,
                     "inline-flex items-center justify-center",
                     {
                         "border-transparent": !custom.border,

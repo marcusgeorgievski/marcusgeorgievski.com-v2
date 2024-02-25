@@ -3,8 +3,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { BiMessage } from "react-icons/bi"
 import Link from "next/link"
 import { scrollTo } from "@/lib/utils"
-import Tag from "@/components/tag"
-import { FaGolang } from "react-icons/fa6"
 
 export default function Hero() {
     return (

@@ -1,4 +1,4 @@
-import Project from "@/components/project/project-card"
+import ProjectCard from "@/components/project/project-card"
 import Section from "@/components/sections/section"
 import { Project as P } from "@/lib/types"
 import { Button } from "../ui/button"
@@ -27,7 +27,7 @@ export default function Projects() {
                         //     opacity: 0, // Start with opacity 0 to ensure the fade-in effect
                         // }}
                     >
-                        <Project project={project} />
+                        <ProjectCard project={project} />
                     </div>
                 ))}
             </div>

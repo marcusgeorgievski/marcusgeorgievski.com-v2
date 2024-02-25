@@ -18,8 +18,7 @@ export default async function NotesPage() {
 
                 <div className="text-xl text-muted-foreground">
                     <div className="flex items-center gap-2">
-                        <PiWarning />
-                        <p>Example</p>
+                        <p>In Progress</p>
                     </div>
                     <p className="text-muted-foreground text-xs">coming soon</p>
                 </div>
@@ -27,6 +26,8 @@ export default async function NotesPage() {
                 <div className="mt-4 grid grid-cols-1 md:grid-cols-2">
                     <NoteCard note={notes[0]} />
                 </div>
+
+                <div></div>
             </div>
         </>
     )

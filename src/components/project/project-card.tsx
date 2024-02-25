@@ -8,11 +8,11 @@ import { FaGithub } from "react-icons/fa"
 import { IoIosLaptop } from "react-icons/io"
 import Tag from "@/components/tag"
 
-export default function Project({ project }: { project: P }) {
+export default function ProjectCard({ project }: { project: P }) {
     const { title, description, image, tags, github, live, video } = project
 
     return (
-        <div className="md:grid md:grid-cols-[200px,auto] md:gap-8 p-4 hover:bg-accent/30 transition-all rounded ">
+        <div className="md:grid md:grid-cols-[200px,auto] md:gap-8 p-4 hover:bg-accent/30 transition-all rounded">
             {video ? (
                 <Dialog>
                     <DialogTrigger

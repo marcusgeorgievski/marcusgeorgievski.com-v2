@@ -7,9 +7,7 @@ interface PostsProps {
 export default function Posts() {
     return (
         <>
-            <Section subtitle="Click an image to view a demo">
-                Recent Posts
-            </Section>
+            <Section subtitle="">Recent Posts</Section>
 
             <div className="h-screen grid grid-cols-3 pt-8">
                 <div id="post">
