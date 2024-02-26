@@ -54,8 +54,8 @@ export default function ProjectCard({ project }: { project: P }) {
             )}
 
             <div>
-                <h3 className="font-bold text-xl mb-2">{title}</h3>
-                <p className="text-sm">{description}</p>
+                <h3 className="font-semibold text-lg mb-2">{title}</h3>
+                <p className="text-sm text-muted-foreground">{description}</p>
                 {tags && (
                     <div className="flex gap-2 mt-4 flex-wrap">
                         {tags.map((tag, i) => (

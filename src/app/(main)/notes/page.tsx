@@ -23,7 +23,7 @@ export default async function NotesPage() {
                     <p className="text-muted-foreground text-xs">coming soon</p>
                 </div>
 
-                <div className="mt-4 grid grid-cols-1 md:grid-cols-2">
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2">
                     <NoteCard note={notes[0]} />
                 </div>
 

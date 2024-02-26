@@ -10,7 +10,7 @@ export default function Home({ searchParams: { msg } }: any) {
         <div className="flex flex-col gap-12 md:gap-20">
             <div className="xl:grid xl:grid-cols-[450px,auto] xl:py-20 flex flex-col gap-16">
                 <div className="pt-12 xl:pt-0  xl:w-full">
-                    <div className="xl:sticky top-20 z-0 ">
+                    <div className="xl:sticky top-20 ">
                         <Hero />
                     </div>
 

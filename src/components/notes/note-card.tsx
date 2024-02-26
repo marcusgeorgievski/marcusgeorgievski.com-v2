@@ -19,9 +19,9 @@ export default function NoteCard({ note }: { note: NotePost }) {
     return (
         <Link
             href={`/notes/${title.toLowerCase().split(" ").join("-")}`}
-            className="border w-full rounded p-3 gap-2 flex flex-col sm:flex-row transition-all hover:bg-accent/30"
+            className="border w-full h-fit  rounded p-3 gap-2 flex flex-col md:flex-row transition-all hover:bg-accent/30"
         >
-            <div className="w-full border rounded-sm aspect-video sm:h-[100px] sm:w-fit">
+            <div className="w-full border rounded-md aspect-video md:h-[100px] md:w-fit">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src="https://miro.medium.com/v2/resize:fit:1200/0*zKkSjGmRg-_1FQgX.jpg"
@@ -29,6 +29,7 @@ export default function NoteCard({ note }: { note: NotePost }) {
                     className="h-full rounded-sm"
                 />
             </div>
+
             <div className="flex flex-col justify-between w-full">
                 <div>
                     <p className="font-semibold text-xl text-foreground line-clamp-1">
