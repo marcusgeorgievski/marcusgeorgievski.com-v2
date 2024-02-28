@@ -2,6 +2,7 @@
 import { PortableText } from "@portabletext/react"
 import Tag from "@/components/tag"
 import SanityImage from "./sanity-image"
+import SanityCode from "./sanity-code"
 
 interface NotePageProps {
     note: any
@@ -47,7 +48,19 @@ export default function NotePage({ note }: NotePageProps) {
                             image: ({ value }) => (
                                 <SanityImage image={value} sizes="100vw" />
                             ),
+                            code: ({ value }) => (
+                                <SanityCode
+                                    code={value.code}
+                                    language={value.language}
+                                    filename={value.filename}
+                                />
+                            ),
                         },
+                        // block: {
+                        //     pre: ({ children }) => (
+                        //         <div className="border">{children}</div>
+                        //     ),
+                        // },
                     }}
                 />
             </article>

@@ -16,8 +16,6 @@ interface Props {
 export default function SanityImage({ image, ...props }: any) {
     const sanityImage = useNextSanityImage(client, image)
 
-    console.log("IMG:", image)
-
     return (
         <Image
             // @ts-ignore
