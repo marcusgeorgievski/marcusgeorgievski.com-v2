@@ -3,6 +3,8 @@ import { PortableText } from "@portabletext/react"
 import Tag from "@/components/tag"
 import SanityImage from "./sanity-image"
 import SanityCode from "./sanity-code"
+import Link from "next/link"
+import { client } from "$/lib/client"
 
 interface NotePageProps {
     note: any
@@ -61,6 +63,33 @@ export default function NotePage({ note }: NotePageProps) {
                             ),
                         },
                         block: {},
+                        marks: {
+                            // internalLink: async ({ value, children }) => {
+                            //     const { slug } = await client.fetch(
+                            //         '*[_type == "post" && _id == $id]{"slug": slug.current}[0]',
+                            //         { id: value.reference._ref }
+                            //     )
+                            //     let URL
+                            //     if (process.env.NODE_ENV === "development") {
+                            //         URL = process.env.DEV_URL
+                            //     }
+                            //     if (process.env.NODE_ENV === "production") {
+                            //         URL = process.env.PROD_URL
+                            //     }
+                            //     return (
+                            //         <a href={`${URL}/notes/${slug}`}>
+                            //             {children}
+                            //         </a>
+                            //     )
+                            // },
+                            // link: ({ value, children }) => {
+                            //     return (
+                            //         <a href={value.href} target="_blank">
+                            //             {children}
+                            //         </a>
+                            //     )
+                            // },
+                        },
                     }}
                 />
             </article>

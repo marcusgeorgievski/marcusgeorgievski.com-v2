@@ -32,8 +32,8 @@ export default async function SlugPage({ params }: SlugPageProps) {
     const note = await client.fetch(
         query,
         { slug },
-        { cache: "no-cache" }
-        // { next: { revalidate: 30 } }
+        // { cache: "no-cache" }
+        { next: { revalidate: 60 } }
     )
 
     if (!note) {

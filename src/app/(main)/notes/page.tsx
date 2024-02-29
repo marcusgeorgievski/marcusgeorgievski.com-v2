@@ -14,7 +14,7 @@ export default async function NotesPage() {
         allNotesQuery,
         {},
         // { cache: "no-cache" }
-        { next: { revalidate: 30 } }
+        { next: { revalidate: 60 } }
     )
 
     // console.log(allNotes)

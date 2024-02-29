@@ -24,6 +24,7 @@ export default function NoteCard({ note }: { note: any }) {
                     image={note.mainImage}
                     sizes="400px"
                     className="aspect-[2.5]"
+                    priority
                 />
             </div>
 
