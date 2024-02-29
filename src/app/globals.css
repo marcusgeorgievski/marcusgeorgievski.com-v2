@@ -88,3 +88,7 @@ body {
         --ring: 240 4.9% 83.9%;
     }
 }
+
+.blu {
+    background: radial-gradient(600px at 150px 542px, rgba(29, 78, 216, 0.15));
+}

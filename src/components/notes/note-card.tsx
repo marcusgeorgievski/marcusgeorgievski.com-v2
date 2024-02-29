@@ -17,7 +17,7 @@ export default function NoteCard({ note }: { note: any }) {
     return (
         <Link
             href={`/notes/${note.slug.current}`}
-            className="border w-full h-fit rounded p-3 gap-2 flex flex-col transition-all hover:bg-accent/30"
+            className="w-full h-fit rounded p-3 gap-2 flex flex-col transition-all hover:bg-accent/30"
         >
             <div className="rounded-md overflow-hidden border border-slate-200/0">
                 <SanityImage
@@ -32,7 +32,7 @@ export default function NoteCard({ note }: { note: any }) {
                     <h2 className="font-semibold text-xl text-foreground line-clamp-1">
                         {note.title}
                     </h2>
-                    <p className="text-xs text-justify mb-2 line-clamp-2">
+                    <p className="text-xs text-justify mb-2 line-clamp-2 h-[32px]">
                         {note.description}
                     </p>
                 </div>

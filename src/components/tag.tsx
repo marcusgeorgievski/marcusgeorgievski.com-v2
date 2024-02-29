@@ -9,6 +9,7 @@ interface TagProps {
         border?: boolean
         icon?: boolean
         variant?: "minimal" | "inline" | any
+        active?: boolean
     }
 }
 
@@ -19,6 +20,7 @@ export default function Tag({
         variant: "",
         border: false,
         icon: true,
+        active: true,
     },
 }: TagProps) {
     const tag: Tag | undefined = tags.find((tag) => tag.name === name)
@@ -47,8 +49,11 @@ export default function Tag({
         return (
             <span
                 className={cn(
+                    custom.active
+                        ? "bg-foreground/90 text-accent/90"
+                        : "bg-accent",
                     className ||
-                        "text-accent-foreground/90 border bg-accent rounded text-xs px-2 py-0.5 inline-flex items-center justify-center gap-1.5",
+                        " border rounded text-xs px-2 py-0.5 inline-flex items-center justify-center gap-1.5",
                     "inline-flex items-center justify-center",
                     {
                         "border-transparent": !custom.border,
