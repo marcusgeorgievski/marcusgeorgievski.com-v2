@@ -40,13 +40,17 @@ export default function NotePage({ note }: NotePageProps) {
                 className="rounded  mx-auto border overflow-hidden mt-6 mb-2"
             />
 
-            <article className="py-5 dark:prose-invert prose prose-base md:prose-base lg:prose-lg max-w-none mx-auto ">
+            <article className="py-5 dark:prose-invert prose prose-base max-w-none mx-auto ">
                 <PortableText
                     value={note.body}
                     components={{
                         types: {
                             image: ({ value }) => (
-                                <SanityImage image={value} sizes="100vw" />
+                                <SanityImage
+                                    image={value}
+                                    sizes="100vw"
+                                    className="rounded-sm mx-auto"
+                                />
                             ),
                             code: ({ value }) => (
                                 <SanityCode
@@ -56,11 +60,7 @@ export default function NotePage({ note }: NotePageProps) {
                                 />
                             ),
                         },
-                        // block: {
-                        //     pre: ({ children }) => (
-                        //         <div className="border">{children}</div>
-                        //     ),
-                        // },
+                        block: {},
                     }}
                 />
             </article>

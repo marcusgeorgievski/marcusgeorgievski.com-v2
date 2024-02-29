@@ -6,6 +6,10 @@
     * {
         @apply border-border;
     }
+
+    /* pre {
+        @apply mb-10;
+    } */
     body {
         @apply bg-background transition-colors selection:bg-accent min-h-[100.04vh];
     }

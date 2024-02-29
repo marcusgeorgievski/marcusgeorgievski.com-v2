@@ -7,7 +7,7 @@ import { scrollTo } from "@/lib/utils"
 export default function Hero() {
     return (
         <div className="animate-fade-in">
-            <h1 className="text-4xl font-extrabold mb-3">Marcus Georgievski</h1>
+            <h1 className="text-4xl font-extrabold mb-2">Marcus Georgievski</h1>
             <p className="text-xl text-foreground mb-6">Full Stack Developer</p>
 
             <p className="max-w-[400px] mb-4">

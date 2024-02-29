@@ -7,11 +7,6 @@ import {
 } from "@/components/ui/accordion"
 import { tags } from "@/lib/tags"
 import Tag from "@/components/tag"
-import { useState } from "react"
-
-interface NotesFilterProps {
-    //children: React.ReactNode;
-}
 
 export default function NotesFilter({
     filters,
@@ -51,7 +46,6 @@ export default function NotesFilter({
                                             icon: true,
                                             active: filters.has(tag.name!),
                                         }}
-                                        // className="text-xs font-mono text-accent-foreground/80 bg-accent/10 px-2 py-1 rounded"
                                     />
                                 </button>
                             ))}
