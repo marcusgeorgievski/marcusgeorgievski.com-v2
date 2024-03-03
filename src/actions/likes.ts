@@ -12,7 +12,7 @@ export async function deleteLike(id: string) {
     // return results
 }
 
-export async function createComment(postId: string) {
+export async function createLike(postId: string) {
     // const results = await sql`INSERT INTO "Comment" ${sql(comment)}`
     // return results
 }

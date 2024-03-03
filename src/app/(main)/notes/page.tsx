@@ -2,6 +2,7 @@ import ProfileCard from "@/components/notes/profile-card"
 import { client } from "@/../sanity/lib/client"
 import { Metadata } from "next"
 import NotesList from "./notes"
+import { SiGnometerminal } from "react-icons/si"
 
 export const metadata: Metadata = {
     title: "Notes | Marcus Georgievski",
@@ -22,7 +23,15 @@ export default async function NotesPage() {
     return (
         <>
             <div className="py-8 flex flex-col gap-4">
-                <h1 className="text-4xl font-extrabold">Notes</h1>
+                <div>
+                    <h1 className="text-4xl font-extrabold flex items-center gap-4 mb-1">
+                        <SiGnometerminal />
+                        Notes
+                    </h1>
+                    <p>
+                        Collection of notes on programming and other interests
+                    </p>
+                </div>
                 {/* <div>
                     <ProfileCard />
                 </div> */}
