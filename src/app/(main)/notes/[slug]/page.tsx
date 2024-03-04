@@ -1,6 +1,8 @@
 import { client } from "@/../sanity/lib/client"
 import NotePage from "../../../../components/notes/note-page"
 import { Metadata } from "next"
+import Comments from "@/components/comments/comments"
+import { notDeepEqual } from "assert"
 
 interface SlugPageProps {
     params: { slug: string }
@@ -19,6 +21,8 @@ export async function generateMetadata({
         { next: { revalidate: 30 } }
         // { cache: "no-cache" }
     )
+
+    // console.log(note)
 
     return {
         title: note.title,
@@ -40,5 +44,10 @@ export default async function SlugPage({ params }: SlugPageProps) {
         return <div>404</div>
     }
 
-    return <NotePage note={note} />
+    return (
+        <>
+            <NotePage note={note} />
+            <Comments noteId={note._id} />
+        </>
+    )
 }

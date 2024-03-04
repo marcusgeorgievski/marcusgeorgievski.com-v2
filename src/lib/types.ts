@@ -3,7 +3,7 @@ export interface Page {
     href: string
 }
 
-interface Comment {
+export interface Comment {
     postId: string
     commentId: string
     name: string
@@ -11,7 +11,7 @@ interface Comment {
     createdAt: string
 }
 
-interface Comment {
+interface Like {
     postId: string
     likeId: string
     createdAt: string
@@ -66,7 +66,7 @@ export const messageSchema = z.object({
 })
 
 export const commentSchema = z.object({
-    displayName: z.string().min(1, {
+    name: z.string().min(1, {
         message: "Display name required!",
     }),
     comment: z.string().min(1, {

@@ -17,7 +17,6 @@ export default function MessageList({ messages }: any) {
     const [grid, setGrid] = useState(true)
     const [isPending, startTransition] = useTransition()
     const router = useRouter()
-    router
 
     function delMessage(id: number) {
         startTransition(async () => {
