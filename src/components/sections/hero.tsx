@@ -17,15 +17,15 @@ export default function Hero() {
 
             <p className="max-w-[400px] text-muted-foreground text-xs mb-10">
                 Currently working with{" "}
-                <span className="font-mono underline underline-offset-2 hover:text-blue-600">
+                <span className="font-mono text-foreground/90 underline-offset-2  ">
                     Go
                 </span>{" "}
                 for backend microservices, computer vision with{" "}
-                <span className="font-mono underline underline-offset-2 hover:text-blue-600">
+                <span className="font-mono text-foreground/90 underline-offset-2 ">
                     OpenCV
                 </span>
                 , and{" "}
-                <span className="font-mono underline underline-offset-2 hover:text-blue-600">
+                <span className="font-mono text-foreground/90 underline-offset-2 ">
                     AWS
                 </span>{" "}
                 Cloud Services.
