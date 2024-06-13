@@ -15,18 +15,19 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import Section from "@/components/sections/section"
 import { Textarea } from "@/components/ui/textarea"
 import { createComment } from "@/actions/comments"
-import { useTransition } from "react"
+import { useState, useTransition } from "react"
 import { commentSchema } from "@/lib/types"
 import { useToast } from "@/components/ui/use-toast"
 import { useRouter } from "next/navigation"
+import { scrollTo } from "@/lib/utils"
 
 export default function CommentForm({ noteId }: { noteId: string }) {
     const [isPending, startTransition] = useTransition()
     const { toast } = useToast()
     const router = useRouter()
+    const [open, setOpen] = useState(false)
 
     const form = useForm<z.infer<typeof commentSchema>>({
         resolver: zodResolver(commentSchema),
@@ -59,50 +60,68 @@ export default function CommentForm({ noteId }: { noteId: string }) {
     }
 
     return (
-        <div id="contact">
-            <Form {...form}>
-                <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-6"
-                >
-                    <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                            <FormItem className="max-w-md ">
-                                <FormLabel>Name</FormLabel>
-                                <FormControl>
-                                    <Input placeholder="name" {...field} />
-                                </FormControl>
-                                <FormDescription></FormDescription>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
+        <div>
+            <button
+                onClick={() => {
+                    setOpen(!open)
 
-                    <FormField
-                        control={form.control}
-                        name="comment"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel>Comment</FormLabel>
-                                <FormControl>
-                                    <Textarea
-                                        placeholder=""
-                                        className="resize-none h-[120px]"
-                                        {...field}
-                                    />
-                                </FormControl>
-                                <FormDescription></FormDescription>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-                    <Button type="submit" disabled={isPending}>
-                        Submit
-                    </Button>
-                </form>
-            </Form>
+                    if (open) {
+                        setTimeout(() => {
+                            scrollTo("comment-form")
+                        }, 400)
+                    }
+                }}
+                className="text-blue-600 hover:underline text-xs text-muted-foreground mb-2"
+            >
+                Write a comment
+            </button>
+
+            {open && (
+                <Form {...form}>
+                    <form
+                        onSubmit={form.handleSubmit(onSubmit)}
+                        className="space-y-6"
+                        id="comment-form"
+                    >
+                        <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                                <FormItem className="max-w-md ">
+                                    <FormLabel>Name</FormLabel>
+                                    <FormControl>
+                                        <Input placeholder="name" {...field} />
+                                    </FormControl>
+                                    <FormDescription></FormDescription>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+
+                        <FormField
+                            control={form.control}
+                            name="comment"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Comment</FormLabel>
+                                    <FormControl>
+                                        <Textarea
+                                            placeholder=""
+                                            className="resize-none h-[120px]"
+                                            {...field}
+                                        />
+                                    </FormControl>
+                                    <FormDescription></FormDescription>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <Button type="submit" disabled={isPending}>
+                            Submit
+                        </Button>
+                    </form>
+                </Form>
+            )}
         </div>
     )
 }
